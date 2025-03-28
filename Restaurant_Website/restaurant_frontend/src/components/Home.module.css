@@ -1,0 +1,130 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url(./images/image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+.nav-bar {
+    background-color: rgb(60, 40, 10);
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; 
+}
+
+.nav-bar-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar-ul-li {
+    margin: 0 15px;
+}
+
+.nav-bar-ul-li-a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-bar-ul-li-a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    margin-top: 100px; 
+    flex: 1; 
+    padding: 150px 0px;
+}
+
+.content-h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.content-p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.reserve-btn {
+    background-color: rgb(60, 40, 10);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.reserve-btn:hover {
+    background-color: rgb(128, 89, 29);
+}
+
+/* Gallery Section */
+.gallery {
+    margin-top: 50px;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(176, 167, 155,0.5);
+    width: 100%;
+}
+
+.gallery-h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+    font-family: cursive;
+    text-shadow: 2px 2px black;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-grid-item {
+    width: 100%; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gallery-grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-sizing: border-box;
+}

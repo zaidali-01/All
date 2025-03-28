@@ -1,0 +1,141 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url(./images/image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    height: 100%;
+}
+
+#main {
+    min-height: 100vh; 
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; 
+    padding-top: 80px; 
+    box-sizing: border-box; 
+}
+
+.header-bar {
+    background-color: rgb(60, 40, 10); 
+    padding: 25px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; 
+}
+
+.header-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header-bar ul li {
+    margin: 0 15px;
+}
+
+.header-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header-bar ul li a:hover {
+    text-decoration: underline;
+}
+
+.form-container, .order-container {
+    background-color: rgb(176, 167, 155);
+    padding: 20px;
+    border-radius: 25px;
+    color: black;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top: 40px; 
+}
+
+.form-container h2, .order-container h2 {
+    margin-bottom: 30px;
+    font-family: cursive;
+    color: black;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    width: 27%;
+    margin-right: 25px;
+    text-align: right;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.form-group input ,.form-group select{
+    width: 48%; 
+    padding: 8px; 
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+/* .form-group input,  {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid rgb(65, 45, 4);
+    border-radius: 4px;
+    background-color: rgb(53, 36, 3);
+} */
+
+.reserve-btn, .select-btn, .done-btn {
+    background-color: rgb(53, 34, 5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.reserve-btn:hover, .done-btn:hover {
+    background-color: rgb(128, 89, 29);
+}
+
+.order-summary {
+    margin-top: 20px;
+}
+
+.order-summary h3 {
+    font-size: 1.5rem;
+    color: rgb(60, 40, 10);
+}
+
+.order-summary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-summary li {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
