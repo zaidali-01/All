@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            background-image: url(parliament.jpeg);
+            color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1F1F1F;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .proposal {
+            margin-bottom: 30px;
+        }
+
+        .proposal-description {
+            margin-bottom: 10px;
+        }
+
+        .vote-options {
+            display: flex;
+            justify-content: center;
+        }
+
+        .vote-options label {
+            margin-right: 15px;
+        }
+
+        .vote-options input[type="radio"] {
+            margin-right: 5px;
+        }
+        input[type="radio"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #883f3fb4;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+        }
+
+        input[type="radio"]:checked {
+            background-color: #883f3fb4; 
+        }
+
+        .vote-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #883f3fb4;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .vote-button:hover {
+            background-color: #883f3fb4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Voting System</h2>
+        
+        <div class="proposal" id="proposal1">
+            <div class="proposal-description">
+                <strong>Proposal 1:</strong> This is the no-confidence movement on Prime Minister.
+            </div>
+            <div class="vote-options">
+                <label><input type="radio" name="vote1" value="for"> For</label>
+                <label><input type="radio" name="vote1" value="against"> Against</label>
+                <label><input type="radio" name="vote1" value="abstain"> Abstain</label>
+            </div>
+            <button class="vote-button" onclick="submitVote('proposal1')">Vote</button>
+        </div>
+
+        <div class="proposal" id="proposal2">
+            <div class="proposal-description">
+                <strong>Proposal 2:</strong> Should we pass this budget for the next economic year?
+            </div>
+            <div class="vote-options">
+                <label><input type="radio" name="vote2" value="for"> For</label>
+                <label><input type="radio" name="vote2" value="against"> Against</label>
+                <label><input type="radio" name="vote2" value="abstain"> Abstain</label>
+            </div>
+            <button class="vote-button" onclick="submitVote('proposal2')">Vote</button>
+        </div>
+        
+        <!--We can add or remove any proposal-->
+
+    </div>
+
+    <script>
+        function submitVote(proposalId) {
+            alert('Vote submitted successfully for Proposal ' + proposalId + '!');
+            
+            document.querySelectorAll('#' + proposalId + ' input[type="radio"]').forEach(function(radio) {
+                radio.disabled = true;
+            });
+            document.querySelector('#' + proposalId + ' .vote-button').disabled = true;
+        }
+    </script>
+</body>
+</html>

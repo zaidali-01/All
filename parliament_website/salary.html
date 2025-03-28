@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            background-image: url(parliament.jpeg);
+            color: #CCCCCC;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1F1F1F;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+            .input-container input[type="text"] {
+                width: 300px;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                outline: none;
+                margin-right: 10px; 
+            }
+
+            .input-container button {
+                display: block;
+                width: 100%; 
+                padding: 10px;
+                background-color: #883f3fb4;
+                border: none;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+                outline: none;
+            }
+
+        .result {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Salary Information</h2>
+
+        <div class="input-container">
+            <input type="text" id="parliamentarianId" placeholder="Search for any Parliamentarian ID">
+        </div>
+        <div class="button-container">
+            <button onclick="fetchSalary()">Get Salary Information</button>
+        </div>
+        <div class="result" id="salaryResult">
+
+        </div>
+    </div>
+
+    <script>
+        function fetchSalary() {
+            const parliamentarianId = document.getElementById('parliamentarianId').value;
+            const responseData = {
+                parliamentarianId: parliamentarianId,
+                name: 'John Doe',
+                position: 'Member',
+                salary: '$5000',
+                perks: 'Healthcare, Travel'
+            };
+
+            displaySalary(responseData);
+        }
+
+        function displaySalary(data) {
+            const salaryResult = document.getElementById('salaryResult');
+            salaryResult.innerHTML = `
+                    <p><strong>Name:</strong> ${data.name}</p>
+                    <p><strong>Position:</strong> ${data.position}</p>
+                    <p><strong>Salary:</strong> ${data.salary}</p>
+                    <p><strong>Perks:</strong> ${data.perks}</p>
+                `;
+        }
+
+   </script>
+</body>
+</html>
