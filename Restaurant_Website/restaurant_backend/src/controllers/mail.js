@@ -5,15 +5,15 @@ const transporter = nodemailer.createTransport({
     port: 587,
     secure: false,
     auth: {
-        user: 'bossz09104@gmail.com',
-        pass: 'hpzzhjkwcohiphcq'
+        user: '', //your email
+        pass: '' //your passkey
     }
 });
 
 async function sendEmail(userEmail,data) 
 {
         const mailOptions = {
-            from: '"Zaid Ali" <bossz09104@gmail.com>', 
+            from: '"" <>', //your username and email
             to: userEmail,
             subject: 'Fusion Bytes',
             html: data,
